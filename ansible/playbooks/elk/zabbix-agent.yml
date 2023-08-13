@@ -1,8 +1,0 @@
----
-- hosts:
-    - all
-  become: true
- 
-  roles:
-    - role: imbicile.zabbix-agent
-      tags: zabbix-agent
