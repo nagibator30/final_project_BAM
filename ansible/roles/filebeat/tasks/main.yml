@@ -1,0 +1,13 @@
+---
+- copy:
+    src: /etc/ansible/playbooks/files/filebeat-8.6.2-amd64.deb
+    dest: /tmp/filebeat-8.6.2-amd64.deb
+- name: install filebeat on Ubuntu Family
+  apt:
+    deb: /tmp/filebeat-8.6.2-amd64.deb
+- name: filebeat systemd
+  service:
+    name: filebeat
+    enabled: yes
+    state: started
+

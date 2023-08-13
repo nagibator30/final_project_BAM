@@ -1,0 +1,7 @@
+---
+- hosts:
+    - ub-bind
+  become: true
+
+  roles:
+    - role: mail 
