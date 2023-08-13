@@ -1,0 +1,9 @@
+---
+- name: Install php Web Server on Ubuntu Family
+  apt:
+    name=php7.4
+    state=latest
+  when:
+    ansible_os_family == "Debian"
+  notify:
+    - php7.4 systemd

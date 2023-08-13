@@ -1,0 +1,16 @@
+---
+- name: Install dovecot on Ubuntu Family
+ apt:
+   name=dovecot-core
+   state=latest
+   name=dovecot-imapd
+   state=latest
+   name=dovecot-pop3d
+   state=latest
+   name=dovecot-lmtpd
+   state=latest
+ when:
+   ansible_os_family == "Debian"
+ notify:
+   - dovecot systemd
+

@@ -1,0 +1,42 @@
+---
+- name: Install postfix on Ubuntu Family
+  apt:
+    name=postfix
+    state=latest
+  when:
+    ansible_os_family == "Debian"
+  notify:
+    - postfix systemd
+- name: Install dovecot-core on Ubuntu Family
+  apt:
+    name=dovecot-core
+    state=latest
+  when:
+    ansible_os_family == "Debian"
+  notify:
+    - postfix systemd
+- name: Install dovecot-imapd on Ubuntu Family
+  apt:
+    name=dovecot-imapd
+    state=latest
+  when:
+    ansible_os_family == "Debian"
+  notify:
+    - postfix systemd
+- name: Install dovecot-pop3d on Ubuntu Family
+  apt:
+    name=dovecot-pop3d
+    state=latest
+  when:
+    ansible_os_family == "Debian"
+  notify:
+    - postfix systemd
+- name: Install dovecot-lmtpd on Ubuntu Family
+  apt:
+    name=dovecot-lmtpd
+    state=latest
+  when:
+    ansible_os_family == "Debian"
+  notify:
+    - postfix systemd
+   
