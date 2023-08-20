@@ -1,0 +1,6 @@
+---
+- name: kibana systemd
+  systemd:
+    name: kibana
+    enabled: yes
+    state: started

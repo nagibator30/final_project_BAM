@@ -1,0 +1,13 @@
+---
+- copy:
+    src: /etc/ansible/playbooks/files/logstash-8.6.2-x86_64.rpm
+    dest: /tmp/logstash-8.6.2-x86_64.rpm
+- name: install logstash on Centos Family
+  yum:
+    name=/tmp/logstash-8.6.2-x86_64.rpm
+- name: logstash systemd
+  service:
+    name: logstash
+    enabled: yes
+    state: started
+

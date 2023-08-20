@@ -1,0 +1,16 @@
+---
+- name: Install pgsql-repo server on centos
+  yum:
+    name=https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+- name: Install pgsql server on centos
+  yum:
+    name=postgresql12-server
+- name: Install pgsql server on centos
+  yum:
+    name=postgresql12
+- name: postgresql-12 systemd
+  service:
+    name: postgresql-12
+    enabled: yes
+    state: started
+

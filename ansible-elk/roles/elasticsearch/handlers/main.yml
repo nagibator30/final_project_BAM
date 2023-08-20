@@ -1,0 +1,6 @@
+---
+- name: elasticsearch systemd
+  systemd:
+    name: elasticsearch
+    enabled: yes
+    state: started

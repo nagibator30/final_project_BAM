@@ -1,0 +1,13 @@
+---
+- copy:
+    src: /etc/ansible/playbooks/files/kibana-8.6.2-x86_64.rpm
+    dest: /tmp/kibana-8.6.2-x86_64.rpm
+- name: install kibana on Centos Family
+  yum:
+    name=/tmp/kibana-8.6.2-x86_64.rpm
+- name: kibana systemd
+  service:
+    name: kibana
+    enabled: yes
+    state: started
+

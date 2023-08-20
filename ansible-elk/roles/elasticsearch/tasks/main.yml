@@ -1,0 +1,13 @@
+---
+- copy:
+    src: /etc/ansible/playbooks/files/elasticsearch-8.6.2-x86_64.rpm
+    dest: /tmp/elasticsearch-8.6.2-x86_64.rpm
+- name: install elasticsearch on Centos Family
+  yum:
+    name=/tmp/elasticsearch-8.6.2-x86_64.rpm
+- name: elasticsearch systemd
+  service:
+    name: elasticsearch
+    enabled: yes
+    state: started
+

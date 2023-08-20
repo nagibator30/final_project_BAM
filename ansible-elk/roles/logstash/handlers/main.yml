@@ -1,0 +1,6 @@
+---
+- name: logstash systemd
+  systemd:
+    name: logstash
+    enabled: yes
+    state: started
