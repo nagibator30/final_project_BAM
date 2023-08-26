@@ -1,0 +1,18 @@
+$TTL 30m
+@ IN SOA ns1.zone51.158.160.71.78.nip.io. brin.zone51.158.160.71.78.nip.io. (
+1 ; serial
+5h ; renew period
+5m ; retry
+1w ; expire
+30m ); denial cache;
+@ IN NS ns1.zone51.158.160.71.78.nip.io.
+@ IN NS ns2.zone51.158.160.71.78.nip.io.
+
+zone51.158.160.71.78.nip.io. IN MX 20 mail.zone51.158.160.71.78.nip.io.
+zone51.158.160.71.78.nip.io. IN A 158.160.71.78
+ns1 IN A 158.160.71.78
+ns2 IN A 158.160.71.78
+www IN CNAME zone51.158.160.71.78.nip.io.
+mail IN A 158.160.71.78
+elk IN A 158.160.66.99
+grafana IN A 158.160.25.9

@@ -1,0 +1,14 @@
+$TTL 604800
+71.160.158.in-addr.arpa. IN SOA ns1.zone51.158.160.71.78.nip.io. brin.zone51.158.160.71.78.nip.io. (
+99115 ; serial
+3h ; renew period
+1h ; retry
+1w ; expire
+1h ) ; denial cache;
+71.160.158.in-addr.arpa. IN NS ns1.zone51.158.160.71.78.nip.io.
+71.160.158.in-addr.arpa. IN NS ns2.zone51.158.160.71.78.nip.io.
+78.71.160.158.in-addr.arpa. IN PTR zone51.158.160.71.78.nip.io.
+78.71.160.158.in-addr.arpa. IN PTR mail.zone51.158.160.71.78.nip.io.
+99.66.160.158.in-addr.arpa. IN PTR elk.zone51.158.160.71.78.nip.io.
+9.25.160.158.in-addr.arpa. IN PTR grafana.zone51.158.160.71.78.nip.io.
+ 
